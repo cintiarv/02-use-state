@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from './logo.svg'
+import './App.css'
+import { FirstState } from './components/FirstState'
+import { ExerciseComponent } from './components/ExerciseComponent'
 
-function App() {
+function App () {
+  const date = new Date()
+  const yearActual = date.getFullYear()
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className='App'>
+      <header className='App-header'>
+        <img src={logo} className='App-logo' alt='logo' />
+        <h1> El estado en react </h1>
+        <FirstState />
+
+        <ExerciseComponent
+          actualYear={yearActual}
+        />
+
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
